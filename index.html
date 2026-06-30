@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小红书每日增长看板</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202124;
+      --muted: #5f6368;
+      --line: #d9dee7;
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+      --blue: #1d4ed8;
+      --green: #13795b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 42px 20px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 24px 0 10px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    p, li {
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    code {
+      background: #eef2f7;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 2px 6px;
+      color: var(--ink);
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--green);
+      background: #eef8f4;
+      border: 1px solid #bfe5d7;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .links a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background: var(--blue);
+      border-radius: 6px;
+      padding: 9px 12px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <div class="status">GitHub Pages 已准备发布</div>
+      <h1>小红书每日增长看板</h1>
+      <p>这个仓库用于发布每日生成的静态 HTML 看板。看板主体包含推广分析建议、搜索词分析建议、内容分析建议，并在顶部保留高优先级运营风险提醒。</p>
+
+      <h2>当前状态</h2>
+      <p>Pages 站点骨架已上传。当前机器尚未生成真实日报文件，因为本地缺少 <code>config/stores.json</code>，且 Chrome 调试端口 <code>9222</code> 未开启。</p>
+
+      <h2>生成并上传每日看板</h2>
+      <ol>
+        <li>在 MCP 项目中配置 <code>config/stores.json</code>。</li>
+        <li>启动已登录小红书商家后台的 Chrome 调试端口。</li>
+        <li>运行 <code>uv run xhs-qianfan-daily-report --stores config/stores.json --out reports</code>。</li>
+        <li>把生成的 <code>reports/YYYY-MM-DD-dashboard.html</code> 复制为本仓库的 <code>index.html</code> 后提交推送。</li>
+      </ol>
+
+      <div class="links">
+        <a href="https://github.com/nihaoyaoyan/xhs-daily-dashboard">查看 GitHub 仓库</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
