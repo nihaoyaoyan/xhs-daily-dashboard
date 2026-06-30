@@ -46,12 +46,19 @@
     .search-overview strong { display:block; font-size:18px; }
     .search-overview span { display:block; color:var(--muted); font-size:12px; margin-top:3px; }
     .search-overview small { display:block; color:var(--blue); font-size:12px; margin-top:6px; }
+    .keyword-review { border:1px solid var(--line); border-radius:8px; padding:12px; background:#fff; margin:12px 0; }
+    .review-callout { display:flex; gap:10px; align-items:flex-start; border-left:3px solid #f59e0b; background:#fff9db; border-radius:6px; padding:9px 10px; margin:8px 0 10px; font-size:13px; }
+    .review-callout span { color:var(--muted); line-height:1.45; }
+    .strategy-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:10px; margin:12px 0; }
+    .strategy-grid div { border:1px solid var(--line); border-radius:8px; padding:10px; background:#fbfcfe; }
+    .strategy-grid strong { display:block; margin-bottom:6px; }
+    .strategy-grid span { color:var(--muted); font-size:13px; line-height:1.45; }
     table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:13px; }
     th, td { border-top:1px solid var(--line); padding:9px 8px; text-align:left; vertical-align:top; overflow-wrap:anywhere; }
     th { color:var(--muted); font-weight:600; background:#fbfcfe; }
     .empty { border:1px dashed var(--line); border-radius:6px; padding:18px; text-align:center; background:#fbfcfe; }
     footer { color:var(--muted); font-size:12px; margin-top:18px; }
-    @media (max-width: 760px) { header, .section-title { display:block; } .meta { text-align:left; margin-top:10px; } .summary, .gmv-metrics, .search-overview { grid-template-columns:1fr; } table { table-layout:auto; } }
+    @media (max-width: 760px) { header, .section-title, .review-callout { display:block; } .meta { text-align:left; margin-top:10px; } .summary, .gmv-metrics, .search-overview, .strategy-grid { grid-template-columns:1fr; } table { table-layout:auto; } }
   </style>
 </head>
 <body>
@@ -61,7 +68,7 @@
         <h1>小红书每日单店增长看板</h1>
         <p>琪琪生鲜的店 · 2026-06-30</p>
       </div>
-      <div class="meta">数据窗口：2026-06-30 至 2026-06-30 · 笔记发布≥2026-06-30 · 更新 2026-06-30 21:13</div>
+      <div class="meta">数据窗口：2026-06-30 至 2026-06-30 · 笔记发布≥2026-06-30 · 更新 2026-06-30 22:38</div>
     </header>
     <div class="summary">
       <div><strong>1</strong><span>已读取店铺</span></div>
@@ -82,11 +89,11 @@
             <span>客单价</span>
           </div>
           <div class="gmv-metrics">
-            <div><strong>2,006</strong><span>笔记 GMV</span></div>
-            <div><strong>4,020</strong><span>曝光(PV)</span></div>
-            <div><strong>499</strong><span>GPM</span></div>
-            <div><strong>27</strong><span>下单</span></div>
-            <div><strong>74.3</strong><span>客单价</span></div>
+            <div><strong>0</strong><span>笔记 GMV</span></div>
+            <div><strong>0</strong><span>曝光(PV)</span></div>
+            <div><strong>0</strong><span>GPM</span></div>
+            <div><strong>0</strong><span>下单</span></div>
+            <div><strong>0</strong><span>客单价</span></div>
           </div>
           <div class="gmv-note">GPM 是你笔记生意提升的核心；当前仅使用已采集的 GMV、PV、订单和客单价，CTR1/CTR2 暂不伪造。</div>
         </div>
@@ -115,21 +122,62 @@
         <h3>搜索总览</h3>
         
         <div class="search-overview">
-          <div><strong>1.24w</strong><span>近7日笔记搜索曝光</span><small>较上周 +202.95% · 同行 5.13w</small></div>
-          <div><strong>37</strong><span>近7日新发笔记</span><small>同行 506</small></div>
-          <div><strong>143</strong><span>近7日曝光笔记</span><small>同行 2691</small></div>
-          <div><strong>29.60%</strong><span>笔记搜索曝光-点击转化</span><small>较上周 -16.20%</small></div>
-          <div><strong>2.70%</strong><span>笔记搜索点击-支付转化</span><small>较上周 -58.38%</small></div>
+          <div><strong>-</strong><span>近7日笔记搜索曝光</span><small>-</small></div>
+          <div><strong>-</strong><span>近7日新发笔记</span><small>-</small></div>
+          <div><strong>-</strong><span>近7日曝光笔记</span><small>-</small></div>
+          <div><strong>-</strong><span>笔记搜索曝光-点击转化</span><small>-</small></div>
+          <div><strong>-</strong><span>笔记搜索点击-支付转化</span><small>-</small></div>
+        </div>
+    
+        
+        <div class="keyword-review">
+          <h3>关键词每日复盘</h3>
+          <div class="metric-row">
+            <span>近7天笔记数据</span>
+            <span>搜索曝光：869</span>
+            <span>CTR：30.15%</span>
+            <span>阅读：710</span>
+            <span>商品点击：262</span>
+            <span>成交：10</span>
+          </div>
+          <div class="review-callout">
+            <strong>搜索排名变化：未采集</strong>
+            <span>当前 MCP 尚未保存历史搜索排名，本版先用搜索热度、成交指数和笔记成交承接判断词的去留。</span>
+          </div>
+          <h3>按核心关键词分组</h3>
+          <table><thead><tr><th>核心词</th><th>引流词</th><th>搜索热度</th><th>成交指数</th><th>竞争笔记</th><th>阅读</th><th>订单</th><th>GMV</th><th>判断</th></tr></thead><tbody><tr><td>虾仁</td><td>虾仁 / 减脂餐 / 虾 / 虾仁做法大全 / 减脂餐的食谱</td><td>389</td><td>0</td><td>-</td><td>650</td><td>0</td><td>472</td><td>继续深耕核心词</td></tr>
+<tr><td>减脂轻食</td><td>糙米推荐哪个牌子好 / 减脂餐食谱</td><td>24</td><td>14.29%</td><td>-</td><td>41</td><td>0</td><td>127</td><td>继续深耕核心词</td></tr>
+<tr><td>云岫郭晋雄电</td><td>云岫郭晋雄电视剧</td><td>19</td><td>-</td><td>-</td><td>19</td><td>0</td><td>0</td><td>暂停放大，等待连续数据确认</td></tr></tbody></table>
+          <h3>按标题模型分组</h3>
+          <div class="review-callout">
+            <strong>CTR最高模型：健康备餐</strong>
+            <span>阅读成交效率最高模型：健康备餐</span>
+          </div>
+          <table><thead><tr><th>标题模型</th><th>笔记数</th><th>CTR</th><th>阅读</th><th>订单</th><th>GPM</th><th>阅读-成交</th></tr></thead><tbody><tr><td>健康备餐</td><td>1</td><td>CTR：41.18%</td><td>17</td><td>0</td><td>7,470.59</td><td>0.00%</td></tr>
+<tr><td>数字</td><td>6</td><td>CTR：38.80%</td><td>250</td><td>0</td><td>1,324</td><td>0.00%</td></tr>
+<tr><td>情绪故事</td><td>1</td><td>CTR：29.56%</td><td>389</td><td>0</td><td>688.95</td><td>0.00%</td></tr>
+<tr><td>其他</td><td>3</td><td>CTR：22.54%</td><td>71</td><td>0</td><td>0</td><td>0.00%</td></tr></tbody></table>
+          <div class="strategy-grid">
+            <div><strong>继续深耕核心词</strong><span>虾仁 / 减脂轻食</span></div>
+            <div><strong>转向竞争更小的长尾词</strong><span>优先挑搜索热度有量、社区笔记竞争低、店内可承接的长尾词</span></div>
+          </div>
+          <h3>输出计划</h3>
+          <table><thead><tr><th>动作</th><th>对象</th></tr></thead><tbody><tr><td>保留高潜关键词</td><td>虾仁 / 减脂轻食</td></tr>
+<tr><td>优化点击低的标题</td><td>健康备餐 / 数字 / 情绪故事 / 其他</td></tr>
+<tr><td>停止表现持续不佳的方向</td><td>未采集连续表现不佳的历史证据，本次不直接判死；先将无订单且无搜索机会的方向暂停放大</td></tr></tbody></table>
         </div>
     
         <h3>引流搜索词</h3>
-        <table><thead><tr><th>搜索词</th><th>搜索热度</th><th>成交指数</th><th>社区热门笔记</th><th>关联商品</th><th>机会原因</th></tr></thead><tbody><tr><td>冻虾仁怎么煮几分钟</td><td>8.31w+</td><td>-持平</td><td>-</td><td>手剥海虾仁不泡药虾仁一人食上班带饭懒人轻食食材顺丰包邮</td><td>商品不足</td></tr>
-<tr><td>上班做饭</td><td>7.39w+</td><td>165.08%</td><td>-</td><td>手剥海虾仁不泡药虾仁一人食上班带饭懒人轻食食材顺丰包邮</td><td>转化机会</td></tr>
-<tr><td>野餐适合带的食物</td><td>13.27w+</td><td>16.10%</td><td>6.38w+</td><td>手剥海虾仁不泡药虾仁一人食上班带饭懒人轻食食材顺丰包邮</td><td>-</td></tr>
-<tr><td>即食肉类</td><td>5.93w+</td><td>27.66%</td><td>-</td><td>手剥海虾仁不泡药虾仁一人食上班带饭懒人轻食食材顺丰包邮</td><td>商品不足</td></tr>
-<tr><td>减脂轻食</td><td>7.37w+</td><td>11.49%</td><td>-</td><td>手剥海虾仁不泡药虾仁一人食上班带饭懒人轻食食材顺丰包邮</td><td>转化机会</td></tr>
-<tr><td>减肥期间嘴馋零食</td><td>12.63w+</td><td>19.44%</td><td>10.97w+</td><td>手剥海虾仁不泡药虾仁一人食上班带饭懒人轻食食材顺丰包邮</td><td>-</td></tr>
-<tr><td>减肥食物</td><td>9.79w+</td><td>10.32%</td><td>6.49w+</td><td>手剥海虾仁不泡药虾仁一人食上班带饭懒人轻食食材顺丰包邮</td><td>-</td></tr></tbody></table>
+        <table><thead><tr><th>搜索词</th><th>搜索热度</th><th>成交指数</th><th>社区热门笔记</th><th>关联商品</th><th>机会原因</th></tr></thead><tbody><tr><td>虾仁 / 减脂餐</td><td>389</td><td>3.48%</td><td>-</td><td>减脂餐食谱</td><td>has_payment</td></tr>
+<tr><td>虾</td><td>73</td><td>0</td><td>-</td><td>虾仁</td><td>zero_payment / high_ctr</td></tr>
+<tr><td>虾仁做法大全 / 减脂餐的食谱</td><td>51</td><td>4.76%</td><td>-</td><td>减脂餐食谱</td><td>has_payment / high_ctr</td></tr>
+<tr><td>虾哪种品种好吃</td><td>41</td><td>10.53%</td><td>-</td><td>虾仁</td><td>has_payment / high_ctr</td></tr>
+<tr><td>虾多少钱一斤</td><td>37</td><td>0</td><td>-</td><td>虾仁多少钱一斤正常</td><td>zero_payment</td></tr>
+<tr><td>减脂餐</td><td>31</td><td>0</td><td>-</td><td>虾仁</td><td>zero_payment / high_ctr</td></tr>
+<tr><td>空气炸锅减脂餐冷冻 / 冷冻虾可以直接考嘛</td><td>28</td><td>0</td><td>-</td><td>空气炸锅冷冻虾仁</td><td>zero_payment</td></tr>
+<tr><td>糙米推荐哪个牌子好</td><td>24</td><td>0</td><td>-</td><td>减脂餐食谱</td><td>zero_payment / high_ctr</td></tr>
+<tr><td>云岫郭晋雄电视剧</td><td>19</td><td>-</td><td>-</td><td>两斤羊肉一碗羊汤</td><td>zero_payment</td></tr>
+<tr><td>减脂餐食谱</td><td>17</td><td>14.29%</td><td>-</td><td>减脂餐食谱</td><td>has_payment / high_ctr</td></tr></tbody></table>
       </section>
     
     
@@ -139,22 +187,10 @@
           <p>用 GMV = GPM × PV 定位内容问题：先处理零成交曝光，再复制爆款候选的高 GPM 结构。</p>
         </div>
         <div class="metric-row">
-          <span>零成交曝光 348</span>
-          <span>爆款候选GMV 2,006</span>
+          <span>零成交曝光 0</span>
+          <span>爆款候选GMV 0</span>
         </div>
-        <table><thead><tr><th>类型</th><th>笔记/商品</th><th>阅读/PV</th><th>笔记GMV</th><th>订单</th><th>GPM</th><th>建议动作</th></tr></thead><tbody><tr><td>无成交笔记</td><td>感谢315，我家一人食虾仁又爆单了！！！</td><td>0</td><td>0</td><td>0</td><td>0</td><td>优化封面、卖点和挂载商品</td></tr>
-<tr><td>无成交笔记</td><td>和老爸商量后，决定推出低卡独立小包装！</td><td>0</td><td>0</td><td>0</td><td>0</td><td>优化封面、卖点和挂载商品</td></tr>
-<tr><td>无成交笔记</td><td>减脂期被同事说，天天吃虾仁太奢侈！</td><td>0</td><td>0</td><td>0</td><td>0</td><td>优化封面、卖点和挂载商品</td></tr>
-<tr><td>无成交笔记</td><td>按照粉丝的要求，推出一周69块一人食小包装</td><td>0</td><td>0</td><td>0</td><td>0</td><td>优化封面、卖点和挂载商品</td></tr>
-<tr><td>无成交笔记</td><td>我妈：终于不天天吃外卖了🤣</td><td>70</td><td>0</td><td>0</td><td>0</td><td>优化封面、卖点和挂载商品</td></tr>
-<tr><td>无成交笔记</td><td>控体期连吃15天虾仁后，我真香了</td><td>37</td><td>0</td><td>0</td><td>0</td><td>优化封面、卖点和挂载商品</td></tr>
-<tr><td>爆款候选</td><td>和老爸商量后，为减脂姐妹推出专属小包！！</td><td>954</td><td>542</td><td>8</td><td>568.13</td><td>复刻标题、封面和卖点结构</td></tr>
-<tr><td>爆款候选</td><td>夏日减脂真不贵，69承包我一周减脂餐！</td><td>422</td><td>536</td><td>7</td><td>1,270.14</td><td>复刻标题、封面和卖点结构</td></tr>
-<tr><td>爆款候选</td><td>我爸说了，60块吃一周让你冰箱多点安全感</td><td>724</td><td>329</td><td>4</td><td>454.42</td><td>复刻标题、封面和卖点结构</td></tr>
-<tr><td>爆款候选</td><td>和老爸商量后，推出懒人免处理虾仁</td><td>189</td><td>202</td><td>3</td><td>1,068.78</td><td>复刻标题、封面和卖点结构</td></tr>
-<tr><td>爆款候选</td><td>现在年轻人，严重低估了70块的购买力</td><td>397</td><td>136</td><td>2</td><td>342.57</td><td>复刻标题、封面和卖点结构</td></tr>
-<tr><td>爆款候选</td><td>我爸说：真的低估69块的购买力了！！</td><td>72</td><td>136</td><td>2</td><td>1,888.89</td><td>复刻标题、封面和卖点结构</td></tr>
-<tr><td>商品内容</td><td>手剥海虾仁不泡药虾仁一人食上班带饭懒人轻食食材顺丰包邮 5盒（100g/盒 约35-45只）</td><td>-</td><td>-</td><td>27</td><td>-</td><td>has_ordering_content</td></tr></tbody></table>
+        <p class="empty">暂无内容建议</p>
       </section>
     
     <footer>此看板由本地 MCP 从已登录的小红书商家后台读取数据后生成，建议均基于规则和证据表。</footer>
